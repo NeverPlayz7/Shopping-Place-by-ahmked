@@ -1,40 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Oasis Store</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-</head>
-<body>
-  <!-- Particle background -->
-  <div id="particles-js"></div>
-
-  <!-- Navigation -->
-  <nav>
-    <div class="logo">Oasis Store</div>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#products">Products</a></li>
-      <li><a href="#categories">Categories</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- Hero Banner -->
-  <section class="hero" id="home">
-    <div class="hero-text">
-      <h1>Welcome to Oasis Store</h1>
-      <p>Discover premium products with style 🚀</p>
-      <a href="#products" class="btn">Shop Now</a>
-    </div>
-  </section>
-
-  <!-- Featured Products Slider -->
-  <section class="featured" id="products">
-    <h2>Featured Products</h2>
+<!-- Featured Products Slider -->
+<section class="featured" id="products">
+  <h2>Featured Products</h2>
+  <div class="slider-container">
+    <button class="slider-btn left-btn">&#10094;</button>
     <div class="product-slider">
       <div class="product-card">
         <img src="https://via.placeholder.com/300x200" alt="Cool Sneakers">
@@ -54,35 +22,13 @@
         <p>Immersive sound for epic gaming sessions.</p>
         <button>Add to Cart</button>
       </div>
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200" alt="Hoodie">
+        <h3>Hoodie</h3>
+        <p>Comfortable, stylish hoodie for every day.</p>
+        <button>Add to Cart</button>
+      </div>
     </div>
-  </section>
-
-  <!-- Product Categories -->
-  <section class="categories" id="categories">
-    <h2>Shop by Category</h2>
-    <div class="category-grid">
-      <div class="category-card">Sneakers</div>
-      <div class="category-card">Watches</div>
-      <div class="category-card">Headsets</div>
-      <div class="category-card">Hoodies</div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer id="contact">
-    <p>&copy; 2026 Oasis Store. All Rights Reserved.</p>
-  </footer>
-
-  <!-- Floating WhatsApp & Instagram -->
-  <div class="floating-contacts">
-    <a href="https://wa.me/923001234567" target="_blank" class="whatsapp">
-      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp Logo">
-    </a>
-    <a href="https://instagram.com/oasisstore" target="_blank" class="instagram">
-      <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram Logo">
-    </a>
+    <button class="slider-btn right-btn">&#10095;</button>
   </div>
-
-  <script src="script.js"></script>
-</body>
-</html>
+</section>
