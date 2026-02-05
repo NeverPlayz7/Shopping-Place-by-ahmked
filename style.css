@@ -1,52 +1,45 @@
-/* Reset & font */
-* { margin: 0; padding: 0; box-sizing: border-box; font-family:'Poppins', sans-serif; }
-body, html { text-align:center; background:#0e0e0e; color:#fff; }
-
-/* Particle */
-#particles-js { position: fixed; top:0; left:0; width:100%; height:100%; z-index:-1; }
-
-/* Navigation */
-nav {
-  display:flex; justify-content:space-between; align-items:center; padding:15px 50px; background:rgba(0,0,0,0.6); backdrop-filter:blur(5px);
+/* Slider Container */
+.slider-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  gap: 10px;
+  padding: 0 40px;
 }
-nav .logo { font-size:1.8rem; font-weight:700; color:#00ffe4; }
-nav ul { list-style:none; display:flex; gap:25px; }
-nav ul li a { color:#fff; text-decoration:none; font-weight:600; transition:0.2s; }
-nav ul li a:hover { color:#00CED1; }
 
-/* Hero Banner */
-.hero { display:flex; align-items:center; justify-content:center; height:80vh; background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('https://via.placeholder.com/1500x600') center/cover no-repeat; }
-.hero-text h1 { font-size:3rem; color:#00ffe4; text-shadow:0 0 20px #00ffe4; margin-bottom:15px; }
-.hero-text p { font-size:1.2rem; color:#fff; margin-bottom:20px; }
-.btn { padding:10px 25px; background:#00ffe4; color:#0e0e0e; text-decoration:none; border-radius:50px; font-weight:600; transition:0.3s; }
-.btn:hover { background:#00bdb2; transform:scale(1.05); }
+/* Slider Buttons */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: rgba(0,0,0,0.6);
+  color: #00ffe4;
+  border: none;
+  font-size: 2rem;
+  padding: 10px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.slider-btn:hover {
+  background: #00bdb2;
+  transform: translateY(-50%) scale(1.2);
+}
 
-/* Featured Products */
-.featured { padding:60px 20px; }
-.featured h2 { font-size:2.5rem; color:#00ffe4; margin-bottom:40px; }
-.product-slider { display:flex; gap:30px; overflow-x:auto; scroll-behavior:smooth; padding-bottom:10px; }
-.product-card { min-width:250px; background:rgba(255,255,255,0.05); border-radius:15px; padding:20px; text-align:center; transition:transform 0.3s; }
-.product-card:hover { transform:translateY(-10px); box-shadow:0 10px 30px rgba(0,255,228,0.5); }
-.product-card img { width:100%; border-radius:10px; margin-bottom:15px; }
-.product-card h3 { color:#00ffe4; margin-bottom:10px; }
-.product-card p { margin-bottom:15px; }
-.product-card button { padding:10px 20px; background:#00ffe4; color:#0e0e0e; border:none; border-radius:50px; cursor:pointer; transition:0.3s; }
-.product-card button:hover { background:#00bdb2; transform:scale(1.05); }
+.left-btn { left: 10px; }
+.right-btn { right: 10px; }
 
-/* Categories */
-.categories { padding:60px 20px; }
-.categories h2 { font-size:2.5rem; color:#00ffe4; margin-bottom:40px; }
-.category-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:30px; }
-.category-card { background:rgba(255,255,255,0.05); padding:40px 0; border-radius:15px; font-size:1.5rem; font-weight:600; cursor:pointer; transition:0.3s; }
-.category-card:hover { background:#00CED1; color:#0e0e0e; }
+/* Product slider */
+.product-slider {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 20px 0;
+}
 
-/* Footer */
-footer { padding:30px 20px; background:rgba(0,0,0,0.6); backdrop-filter:blur(5px); }
-
-/* Floating Contacts */
-.floating-contacts { position:fixed; bottom:20px; right:20px; display:flex; flex-direction:column; gap:15px; z-index:1000; }
-.floating-contacts a { display:flex; align-items:center; justify-content:center; width:50px; height:50px; border-radius:50%; box-shadow:0 0 10px rgba(0,0,0,0.3); transition:transform 0.2s; }
-.floating-contacts a:hover { transform:scale(1.2); }
-.floating-contacts a img { width:25px; height:25px; }
-.floating-contacts a.whatsapp { background-color:#25D366; }
-.floating-contacts a.instagram { background-color:#00CED1; }
+.product-slider::-webkit-scrollbar {
+  display: none; /* hide scrollbar */
+}
